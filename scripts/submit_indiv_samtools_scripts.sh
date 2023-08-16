@@ -1,4 +1,4 @@
-for f in scripts/samtools/xmul_sample_*.sh
+for f in samtools/xmul_sample_*.sh
 
 do
         
