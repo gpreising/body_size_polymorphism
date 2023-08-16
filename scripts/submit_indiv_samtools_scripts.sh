@@ -1,8 +1,8 @@
-for f in samtools/xmul_sample_*.sh
+for f in scripts/samtools/xmul_sample_*.sh
 
 do
         
-        filename=${f:17} 
+        filename=${f:17}
         sbatch $filename
 
 done
