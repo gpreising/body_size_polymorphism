@@ -9,4 +9,4 @@
 
 ml biology bwa samtools java bcftools
 
-perl /home/groups/schumer/shared_bin/Lab_shared_scripts/run_samtools_only_parental_v2.pl data/split_reads/xmul_sample_bx data/ref_genome_files/xmul-TABQ-V-22-M_v2023.1_forgabe_XY.fa PE
+perl /home/groups/schumer/shared_bin/Lab_shared_scripts/run_samtools_only_parental_v2.pl data/split_reads/xmul_sample_bx data/ref_genome_files/xmul-TABQ-V-22-M_v2023.1_forgabe_XY.fasta PE
