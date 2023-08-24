@@ -43,5 +43,5 @@ all_case_control %>%
   summarise(n())
 
 # n=168 courters, n=118 sneakers
-write.table(all_case_control$tactic, file="all_case_control_20230823.txt", row.names=F, col.names=F, sep = "\t", quote = FALSE)
+write.table(all_case_control$tactic, file="data/all_case_control_20230823.txt", row.names=F, col.names=F, sep = "\t", quote = FALSE)
 
