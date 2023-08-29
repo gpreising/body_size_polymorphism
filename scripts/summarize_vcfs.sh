@@ -18,7 +18,7 @@ for f in data/*.vcf
 
 do
 
-        filename=${f:6}
+        filename=${f:5}
 
         perl /home/groups/schumer/shared_bin/Lab_shared_scripts/print_alleles_depth_freq_chi_per_site_GWAS_v2.pl data/$filename 30 > data/${filename}.summary
 
