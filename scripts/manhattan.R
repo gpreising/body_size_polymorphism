@@ -1,8 +1,8 @@
 library(devtools)
 library(tidyverse)
-source("/Users/gabep/Desktop/schumerlab/body_size_evolution/Xmul_GWAS/ggmanhattan_v0.R")
+source("scripts/ggmanhattan_v0.R")
 
-dat <- read.csv("/Users/gabep/Desktop/schumerlab/body_size_polymorphism/data/readlist_PEindivs.allindiv.allchroms.vcf.summary.dedupheaders.filt",sep="\t", header=FALSE)
+dat <- read.csv("data/readlist_PEindivs.allindiv.allchroms.vcf.summary.dedupheaders.filt",sep="\t", header=FALSE)
 
 dat <- dat %>%
   rename(group = V1,
@@ -23,3 +23,9 @@ dat_edited <- dat %>%
   mutate(group = str_replace(group, "_", " "))
 
 ggmanhattanPlot(dat_edited, species="X. multilineatus", colors=c("grey","#FCC000"))
+
+# just Y
+dat_edited_Y <- dat_edited %>%
+  filter(group == "21 Y")
+
+ggmanhattanPlot(dat_edited_Y, species="X. multilineatus", colors = c("#FCC000","grey"))
