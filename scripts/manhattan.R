@@ -20,7 +20,8 @@ dat <- ggmanhattanFormat(dat)
 
 dat_edited <- dat %>%
   mutate(group = str_extract(group, "(?<=_).*")) %>%
-  mutate(group = str_replace(group, "_", " "))
+  mutate(group = str_replace(group, "_", " ")) %>%
+  filter(depth >= 0.1 & (AF_group1 >= 0.05 | AF_group2 >= 0.05))
 
 ggmanhattanPlot(dat_edited, species="X. multilineatus", colors=c("grey","#FCC000"))
 
