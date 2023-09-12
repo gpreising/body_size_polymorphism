@@ -14,9 +14,6 @@ maskfile = args.mask
 
 # sketchy way to get number of lines in the mask fasta but every other way seems to get in the way of writing to the outfile
 # I literally have no idea -- any solution that includes readlines() just breaks
-
-# this actually needs to be fixed such that it extracts the integer from the string
-# for files with > 9 lines it will not work (12 --> 2)
 mask_length = str.split(str(subprocess.check_output(['wc','-l',maskfile])))
 mask_length = int(mask_length[1])
 
@@ -56,7 +53,7 @@ def main():
 					curr_chrom = line.split()[0][1:]
 					# keep track of current position for a given fasta entry
 					pos = 0
-					# initiallize the start and end coordinates for a chunk of bases with mappability scores == 3
+					# initialize the start and end coordinates for a chunk of bases with mappability scores == 3
 					threechunk_start = 0
 					threechunk_end = 0
 
@@ -65,7 +62,7 @@ def main():
 					curr_chrom = line.split()[0][1:]
 					# keep track of current position for a given chrom/scaffold
 					pos = 0
-					# initiallize the start and end coordinates for a chunk of bases with mappability scores == 3
+					# initialize the start and end coordinates for a chunk of bases with mappability scores == 3
 					threechunk_start = 0
 					threechunk_end = 0
 
