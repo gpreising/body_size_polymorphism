@@ -13,9 +13,13 @@ outfile_name = args.outfile
 maskfile = args.mask
 
 # sketchy way to get number of lines in the mask fasta but every other way seems to get in the way of writing to the outfile
-# I literally have no idea - any solution that includes readlines() just breaks
-mask_length = str(subprocess.check_output(['wc','-l',maskfile]))
-mask_length = int(mask_length[9])
+# I literally have no idea -- any solution that includes readlines() just breaks
+
+# this actually needs to be fixed such that it extracts the integer from the string
+# for files with > 9 lines it will not work (12 --> 2)
+mask_length = str.split(str(subprocess.check_output(['wc','-l',maskfile])))
+mask_length = int(mask_length[1])
+
 
 # initialize or overwrite outfile 
 # this will make it such that, if you accidentally run the script twice on the same file, it will overwrite the file instead of appending to it
