@@ -7,4 +7,4 @@
 #SBATCH --time=96:00:00
 #SBATCH --job-name=combine_pseudohaps
 
-perl /home/groups/schumer/shared_bin/Lab_shared_scripts/combine_pseudohaploid_files_pop_structure_analysis.pl data/xmul_pseudohap_list
+perl /home/groups/schumer/shared_bin/Lab_shared_scripts/combine_pseudohaploid_files_pop_structure_analysis.pl xmul_pseudohap_list
