@@ -9,4 +9,4 @@
 
 ml biology plink
 
-plink --noweb --file xmul_pseudohap_list_data_frame.txt.geno --pca --allow-extra-chr --out xmul_pseudohap_list_data_frame.txt.geno
+plink --noweb --file xmul_pseudohap_list_data_frame.txt.geno --pca --allow-extra-chr --allow-no-sex --out xmul_pseudohap_list_data_frame.txt.geno
